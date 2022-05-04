@@ -1,4 +1,4 @@
-package be.technifutur.apiGateway.booking;
+package be.technifutur.booking;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

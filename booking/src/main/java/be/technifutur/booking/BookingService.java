@@ -1,4 +1,4 @@
-package be.technifutur.apiGateway.booking;
+package be.technifutur.booking;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

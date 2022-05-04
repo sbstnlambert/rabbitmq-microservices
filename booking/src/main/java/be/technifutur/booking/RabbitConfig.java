@@ -1,4 +1,4 @@
-package be.technifutur.apiGateway.booking;
+package be.technifutur.booking;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
