@@ -1,4 +1,4 @@
-package be.technifutur.invoice;
+package be.technifutur.apiGateway.invoice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

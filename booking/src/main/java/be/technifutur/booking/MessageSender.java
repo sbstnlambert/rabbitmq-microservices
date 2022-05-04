@@ -1,4 +1,4 @@
-package be.technifutur.booking;
+package be.technifutur.apiGateway.booking;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,14 +10,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-import java.util.UUID;
-
 @Component
 public class MessageSender implements InitializingBean {
 
     private final RabbitTemplate rabbitTemplate;
-    private final  ObjectMapper mapper;
+    private final ObjectMapper mapper;
     private final Logger logger = LoggerFactory.getLogger(MessageSender.class);
 
     public MessageSender(RabbitTemplate rabbitTemplate, ObjectMapper mapper) {
@@ -30,20 +27,17 @@ public class MessageSender implements InitializingBean {
         Message m = MessageBuilder.withBody(bJson.getBytes())
                         .setContentType("application/json")
                                 .build();
-        logger.info("SENDING booking TO invoice: " + m);
+        logger.info("SENDING booking TO invoice: " + booking);
         rabbitTemplate.convertAndSend("direct.exchange", "booking_key", m);
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        sendBookingToInvoice(
-                new Booking(
-                        UUID.randomUUID(),
-                        new Date(),
-                        new Date(),
-                        Booking.Status.REQUESTED
-                )
-        );
-        // TODO: Reprendre la correction ici
+//        sendBookingToInvoice(
+//                new Booking(
+//                        new Date(),
+//                        new Date(),
+//                )
+//        );
     }
 }

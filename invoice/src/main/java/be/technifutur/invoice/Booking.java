@@ -1,4 +1,4 @@
-package be.technifutur.invoice;
+package be.technifutur.apiGateway.invoice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,13 +13,8 @@ import java.util.UUID;
 public class Booking {
 
     private UUID ref;
-//    private Date arrival; // Arrivée à 12:00
-//    private Date departure; // Départ à 12:00
-//    private Status status;
-
-    public static enum Status {
-        REQUESTED,
-        INVOICED
-    }
+    private Date arrival; // Arrive at 12:00
+    private Date departure; // Leave at 12:00
+    private String status;
 
 }

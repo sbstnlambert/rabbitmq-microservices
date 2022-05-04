@@ -1,4 +1,4 @@
-package be.technifutur.booking;
+package be.technifutur.apiGateway.booking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
