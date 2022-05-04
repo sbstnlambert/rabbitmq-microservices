@@ -9,6 +9,15 @@ public class BookingService {
     private final List<Booking> bookings = new ArrayList<>();
 
     public void createBooking(Booking booking) {
+
+//        try {
+//            sender.sendBookingToFacture(booking);
+//            bookings.add(booking);
+//        } catch(Exception e) {
+//            logger.error(e.getMessage());
+//            e.printStackTrace();
+//        }
+
         this.bookings.add(booking);
     }
 
@@ -17,10 +26,9 @@ public class BookingService {
     }
 
     public void setToInvoiced(UUID ref) {
-        Booking booking = this.bookings.stream()
+        this.bookings.stream()
                 .filter(b -> b.getRef() == ref)
                 .findFirst()
-                .orElseThrow();
-        booking.setStatus(Booking.Status.INVOICED);
+                .ifPresent(b -> b.setStatus(Booking.Status.INVOICED));
     }
 }
