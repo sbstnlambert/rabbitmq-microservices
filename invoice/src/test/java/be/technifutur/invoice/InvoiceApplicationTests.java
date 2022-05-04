@@ -1,4 +1,4 @@
-package be.technifutur.apiGateway.invoice;
+package be.technifutur.invoice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
