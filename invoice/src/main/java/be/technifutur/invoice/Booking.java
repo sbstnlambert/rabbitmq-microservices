@@ -13,9 +13,9 @@ import java.util.UUID;
 public class Booking {
 
     private UUID ref;
-    private Date arrival; // Arrivée à 12:00
-    private Date departure; // Départ à 12:00
-    private Status status;
+//    private Date arrival; // Arrivée à 12:00
+//    private Date departure; // Départ à 12:00
+//    private Status status;
 
     public static enum Status {
         REQUESTED,
