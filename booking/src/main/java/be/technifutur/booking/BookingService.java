@@ -9,14 +9,18 @@ public class BookingService {
     private final List<Booking> bookings = new ArrayList<>();
 
     public void createBooking(Booking booking) {
-
-    }
-
-    public void setToInvoiced(UUID ref) {
-
+        this.bookings.add(booking);
     }
 
     public List<Booking> getInvoicedBookings() {
-        return null;
+        return this.bookings;
+    }
+
+    public void setToInvoiced(UUID ref) {
+        Booking booking = this.bookings.stream()
+                .filter(b -> b.getRef() == ref)
+                .findFirst()
+                .orElseThrow();
+        booking.setStatus(Booking.Status.INVOICED);
     }
 }
