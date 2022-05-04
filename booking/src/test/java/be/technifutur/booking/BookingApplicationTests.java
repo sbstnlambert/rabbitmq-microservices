@@ -1,4 +1,4 @@
-package be.technifutur.apiGateway.booking;
+package be.technifutur.booking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
