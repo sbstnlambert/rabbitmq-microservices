@@ -8,9 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
 
     public ObjectMapper mapper() {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
-        return mapper;
+        return new ObjectMapper().registerModule(new JavaTimeModule());
     }
 
 }

@@ -2,11 +2,13 @@ package be.technifutur.booking;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class BookingService {
 
     private final List<Booking> bookings = new ArrayList<>();
@@ -29,13 +31,13 @@ public class BookingService {
 
     public List<Booking> getInvoicedBookings() {
         return bookings.stream()
-                .filter(b -> b.getStatus().equals(Booking.Status.INVOICED))
+                .filter(b -> b.getStatus() == Booking.Status.INVOICED)
                 .toList();
     }
 
     public void setToInvoiced(UUID ref) {
         this.bookings.stream()
-                .filter(b -> b.getRef() == ref)
+                .filter(b -> b.getRef().equals(ref))
                 .findFirst()
                 .ifPresent(b -> b.setStatus(Booking.Status.INVOICED));
     }

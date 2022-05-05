@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -13,8 +13,8 @@ import java.util.UUID;
 public class Booking {
 
     private UUID ref;
-    private Date arrival; // Arrive at 12:00
-    private Date departure; // Leave at 12:00
+    private LocalDate arrival; // Arrive at 12:00
+    private LocalDate departure; // Leave at 12:00
     private String status;
 
 }

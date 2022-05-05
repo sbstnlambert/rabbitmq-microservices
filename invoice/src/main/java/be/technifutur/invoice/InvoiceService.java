@@ -3,11 +3,13 @@ package be.technifutur.invoice;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class InvoiceService {
 
     private final List<Invoice> invoices = new ArrayList<>();
