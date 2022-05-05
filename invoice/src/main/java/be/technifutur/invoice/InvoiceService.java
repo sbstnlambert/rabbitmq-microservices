@@ -21,7 +21,7 @@ public class InvoiceService {
     }
 
     public void createInvoice(UUID bookingRef, int numberOfNightsBooked) {
-        Invoice i = new Invoice(bookingRef, numberOfNightsBooked);
+        Invoice i = new Invoice(bookingRef, numberOfNightsBooked*10);
         try {
             sender.sendInvoiceToBooking(i);
             this.invoices.add(i);
@@ -33,5 +33,13 @@ public class InvoiceService {
 
     public List<Invoice> getInvoices() {
         return new ArrayList<>(this.invoices);
+    }
+
+    public Double getBookingPrice(UUID ref) {
+        return this.invoices.stream()
+                .filter(i -> i.getBookingRef().equals(ref))
+                .findFirst()
+                .map(Invoice::getPrice)
+                .orElse(null);
     }
 }

@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435b832c-2e01-4248-95c0-a3c3c7f194da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +34,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../microservices/microservices" />
   </component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Application.InvoiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.apiGateway.ApiGatewayApplication" />
       <module name="api-gateway" />

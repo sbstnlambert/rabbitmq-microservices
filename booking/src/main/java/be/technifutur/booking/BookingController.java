@@ -28,7 +28,7 @@ public class BookingController {
     }
 
     @GetMapping("/booking")
-    public Booking getBookingByReference(@RequestParam(name = "ref") UUID ref) {
+    public BookingDTO getBookingByReference(@RequestParam(name = "ref") UUID ref) {
         return this.service.getBookingByReference(ref);
     }
 

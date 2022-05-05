@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/invoices")
@@ -19,6 +20,11 @@ public class InvoiceController {
     @GetMapping
     public List<Invoice> getInvoices() {
         return this.service.getInvoices();
+    }
+
+    @GetMapping("/price")
+    public Double getBookingPrice(@RequestParam(name = "ref") UUID ref) {
+        return this.service.getBookingPrice(ref);
     }
 
 }

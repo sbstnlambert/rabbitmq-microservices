@@ -27,7 +27,7 @@ public class MessageReceiver {
         logger.info("BOOKING RECEIVED - " + booking);
         this.service.createInvoice(
                 booking.getRef(),
-                (int)ChronoUnit.DAYS.between(booking.getArrival(), booking.getDeparture())*10
+                (int)ChronoUnit.DAYS.between(booking.getArrival(), booking.getDeparture())
         );
     }
 }

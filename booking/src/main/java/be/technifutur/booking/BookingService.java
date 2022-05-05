@@ -2,7 +2,9 @@ package be.technifutur.booking;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +16,11 @@ public class BookingService {
     private final List<Booking> bookings = new ArrayList<>();
     private final MessageSender sender;
     private final Logger logger = LoggerFactory.getLogger(BookingService.class);
+    private final RestTemplate template;
 
-    public BookingService(MessageSender sender) {
+    public BookingService(MessageSender sender, RestTemplate template) {
         this.sender = sender;
+        this.template = template;
     }
 
     public void createBooking(Booking booking) {
@@ -35,11 +39,23 @@ public class BookingService {
                 .toList();
     }
 
-    public Booking getBookingByReference(UUID ref) {
-        return bookings.stream()
+    public BookingDTO getBookingByReference(UUID ref) {
+        Booking booking = bookings.stream()
                 .filter(b -> b.getRef().equals(ref))
                 .findFirst()
                 .orElseThrow();
+        ResponseEntity<Double> response = this.template.getForEntity(
+                "http://localhost:8282/invoices/price?ref=" + ref,
+                Double.class
+        );
+        Double price = response.getBody();
+        return BookingDTO.builder()
+                .ref(booking.getRef())
+                .arrival(booking.getArrival())
+                .departure(booking.getDeparture())
+                .status(booking.getStatus())
+                .price(price)
+                .build();
     }
 
     public void setToInvoiced(UUID ref) {
