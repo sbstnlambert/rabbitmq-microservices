@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/bookings")
@@ -25,4 +26,10 @@ public class BookingController {
     public List<Booking> getInvoicedBookings() {
         return this.service.getInvoicedBookings();
     }
+
+    @GetMapping("/booking")
+    public Booking getBookingByReference(@RequestParam(name = "ref") UUID ref) {
+        return this.service.getBookingByReference(ref);
+    }
+
 }

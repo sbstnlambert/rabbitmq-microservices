@@ -35,6 +35,13 @@ public class BookingService {
                 .toList();
     }
 
+    public Booking getBookingByReference(UUID ref) {
+        return bookings.stream()
+                .filter(b -> b.getRef().equals(ref))
+                .findFirst()
+                .orElseThrow();
+    }
+
     public void setToInvoiced(UUID ref) {
         this.bookings.stream()
                 .filter(b -> b.getRef().equals(ref))

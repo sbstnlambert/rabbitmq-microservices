@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/bookings")
@@ -27,5 +28,11 @@ public class BookingController {
     @GetMapping("/invoiced")
     public ResponseEntity<?> getInvoicedBookings() {
         return template.getForEntity(this.BASE_URL + "/invoiced", Object.class);
+    }
+
+    // GET ONE BY REF - http://localhost:8080/bookings/booking?ref
+    @GetMapping("/booking")
+    public ResponseEntity<?> getBookingByReference(@RequestParam(name = "ref") UUID ref) {
+        return template.getForEntity(this.BASE_URL + "/booking?ref=" + ref, Object.class);
     }
 }

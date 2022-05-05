@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435b832c-2e01-4248-95c0-a3c3c7f194da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +30,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../microservices/microservices" />
   </component>
-  <component name="RunManager" selected="Application.InvoiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.apiGateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -88,8 +74,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InvoiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.InvoiceApplication" />
         <item itemvalue="Application.BookingApplication" />
       </list>
     </recent_temporary>
