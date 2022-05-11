@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435b832c-2e01-4248-95c0-a3c3c7f194da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_3_19_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_6_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/be/technifutur/apiGateway/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BeanConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BeanConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/InvoiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/target/classes/be/technifutur/apiGateway/InvoiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-booking-invoice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-booking-invoice.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +44,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../microservices/microservices" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\studentjava01\Documents\rabbitmq-microservices\api-gateway\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.InvoiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -79,9 +93,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.InvoiceApplication" />
         <item itemvalue="Application.BookingApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>

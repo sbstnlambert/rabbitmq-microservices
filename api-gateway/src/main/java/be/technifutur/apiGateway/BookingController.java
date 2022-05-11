@@ -1,6 +1,7 @@
 package be.technifutur.apiGateway;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,12 +26,14 @@ public class BookingController {
         return response;
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/invoiced")
     public ResponseEntity<?> getInvoicedBookings() {
         return template.getForEntity(this.BASE_URL + "/invoiced", Object.class);
     }
 
     // GET ONE BY REF - http://localhost:8080/bookings/booking?ref
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/booking")
     public ResponseEntity<?> getBookingByReference(@RequestParam(name = "ref") UUID ref) {
         return template.getForEntity(this.BASE_URL + "/booking?ref=" + ref, Object.class);
