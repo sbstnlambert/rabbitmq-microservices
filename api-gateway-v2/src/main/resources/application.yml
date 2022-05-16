@@ -14,13 +14,26 @@ spring:
         locator:
           enabled: true
       routes:
+
+#        CREATE BOOKING
         - id: to-booking
           uri: lb://booking-service
           predicates:
             - Path=/bookings
             - Method=POST
+
+#        GET INVOICED BOOKINGS
         - id: to-booking-invoiced
           uri: lb://booking-service
           predicates:
             - Path=/bookings/invoiced
             - Method=GET
+
+#        GET ONE BOOKING BY REF
+        - id: to-booking-reference
+          uri: lb://booking-service
+          predicates:
+            - Path=/bookings/booking
+            - Method=GET
+            # Regex to validate UUID type
+            - Query=ref, ^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$
