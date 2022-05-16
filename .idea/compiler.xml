@@ -10,10 +10,12 @@
         <module name="api-gateway" />
         <module name="booking" />
         <module name="invoice" />
+        <module name="api-gateway-v2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-gateway" target="17" />
+      <module name="api-gateway-v2" target="17" />
       <module name="booking" target="17" />
       <module name="invoice" target="17" />
       <module name="rabbitmq-booking-invoice" target="17" />
@@ -22,6 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway-v2" options="-parameters" />
       <module name="booking" options="-parameters" />
       <module name="invoice" options="-parameters" />
     </option>

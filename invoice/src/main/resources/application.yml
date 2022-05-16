@@ -14,3 +14,24 @@ spring:
     console:
       enabled: true
       path: /h2
+
+  application:
+    name: invoice-service
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        instance-id: ${spring.application.name}:${random.uuid}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - beans
+          - mappings
+          - metrics

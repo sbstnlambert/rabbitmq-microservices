@@ -9,6 +9,7 @@
         <module>booking</module>
         <module>invoice</module>
         <module>api-gateway</module>
+<!--        <module>api-gateway-v2</module>-->
     </modules>
 
     <parent>
@@ -25,6 +26,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <spring-cloud.version>2021.0.2</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -66,7 +68,28 @@
             <artifactId>java-jwt</artifactId>
             <version>3.19.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

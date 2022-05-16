@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-gateway-v2/api-gateway-v2.iml" filepath="$PROJECT_DIR$/api-gateway-v2/api-gateway-v2.iml" />
       <module fileurl="file://$PROJECT_DIR$/booking/booking.iml" filepath="$PROJECT_DIR$/booking/booking.iml" />
       <module fileurl="file://$PROJECT_DIR$/invoice/invoice.iml" filepath="$PROJECT_DIR$/invoice/invoice.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-booking-invoice.iml" filepath="$PROJECT_DIR$/rabbitmq-booking-invoice.iml" />
