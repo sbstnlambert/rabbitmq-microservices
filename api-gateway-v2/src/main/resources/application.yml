@@ -37,3 +37,19 @@ spring:
             - Method=GET
             # Regex to validate UUID type
             - Query=ref, ^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$
+
+#        GET INVOICED BOOKINGS
+        - id: to-invoices
+          uri: lb://invoice-service
+          predicates:
+            - Path=/invoices
+            - Method=GET
+
+#        GET ONE INVOICE WITH PRICE BY REF
+        - id: to-invoice-reference
+          uri: lb://invoice-service
+          predicates:
+            - Path=/invoices/price
+            - Method=GET
+            # Regex to validate UUID type
+            - Query=ref, ^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$

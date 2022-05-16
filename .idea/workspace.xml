@@ -91,9 +91,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayV2Application" />
         <item itemvalue="Application.InvoiceApplication" />
         <item itemvalue="Application.BookingApplication" />
+        <item itemvalue="Application.ApiGatewayV2Application" />
         <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
