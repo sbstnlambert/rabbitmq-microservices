@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "application.jwt",
+      "type": "be.technifutur.user.config.JwtProperties",
+      "sourceType": "be.technifutur.user.config.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.jwt.expires",
+      "type": "java.lang.Long",
+      "sourceType": "be.technifutur.user.config.JwtProperties"
+    },
+    {
+      "name": "application.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "be.technifutur.user.config.JwtProperties"
+    },
+    {
+      "name": "application.jwt.prefix",
+      "type": "java.lang.String",
+      "sourceType": "be.technifutur.user.config.JwtProperties"
+    },
+    {
+      "name": "application.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "be.technifutur.user.config.JwtProperties"
+    }
+  ],
+  "hints": []
+}

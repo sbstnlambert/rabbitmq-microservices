@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/booking/booking.iml" filepath="$PROJECT_DIR$/booking/booking.iml" />
       <module fileurl="file://$PROJECT_DIR$/invoice/invoice.iml" filepath="$PROJECT_DIR$/invoice/invoice.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-booking-invoice.iml" filepath="$PROJECT_DIR$/rabbitmq-booking-invoice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
     </modules>
   </component>
 </project>
