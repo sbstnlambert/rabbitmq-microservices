@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="435b832c-2e01-4248-95c0-a3c3c7f194da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking/src/main/java/be/technifutur/booking/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/config/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/model/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/controller/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/service/InvoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/communication/MessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/communication/MessageSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/communication/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway-v2/src/main/java/be/technifutur/ApiGatewayV2/config/RouteLocatorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway-v2/src/main/java/be/technifutur/ApiGatewayV2/config/RouteLocatorConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +47,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/user/src/main/java/be/technifutur/user" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/invoice/src/main/java/be/technifutur/invoice/config" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,7 +74,7 @@
       <recent name="security" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InvoiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayV2Application">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.apiGateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -140,9 +136,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayV2Application" />
         <item itemvalue="Application.BookingApplication" />
         <item itemvalue="Application.InvoiceApplication" />
-        <item itemvalue="Application.ApiGatewayV2Application" />
         <item itemvalue="Application.UserApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
       </list>
