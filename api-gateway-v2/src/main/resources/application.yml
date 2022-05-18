@@ -53,3 +53,11 @@ spring:
             - Method=GET
             # Regex to validate UUID type
             - Query=ref, ^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$
+
+#        AUTHENTICATE LOGIN -> CREATE TOKEN
+        - id: to-user
+          uri: lb://user-service
+          predicates:
+            - Path=/login
+            - Method=POST
+

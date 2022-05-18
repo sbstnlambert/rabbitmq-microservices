@@ -1,4 +1,4 @@
-package be.technifutur.booking;
+package be.technifutur.booking.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

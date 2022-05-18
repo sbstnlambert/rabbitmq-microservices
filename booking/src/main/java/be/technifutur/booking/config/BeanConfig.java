@@ -1,7 +1,8 @@
-package be.technifutur.booking;
+package be.technifutur.booking.config;
 
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -15,6 +16,7 @@ public class BeanConfig {
     }
 
     @Bean
+    @LoadBalanced
     public RestTemplate template() {
         return new RestTemplate();
     }

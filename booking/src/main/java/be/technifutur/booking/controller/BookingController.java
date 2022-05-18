@@ -1,6 +1,11 @@
-package be.technifutur.booking;
+package be.technifutur.booking.controller;
 
+import be.technifutur.booking.service.BookingService;
+import be.technifutur.booking.model.Booking;
+import be.technifutur.booking.model.BookingDTO;
+import be.technifutur.booking.model.BookingForm;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,6 +27,7 @@ public class BookingController {
         this.service.createBooking(form.map());
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/invoiced")
     public List<Booking> getInvoicedBookings() {
         return this.service.getInvoicedBookings();

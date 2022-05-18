@@ -1,5 +1,6 @@
-package be.technifutur.booking;
+package be.technifutur.booking.communication;
 
+import be.technifutur.booking.model.Booking;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;

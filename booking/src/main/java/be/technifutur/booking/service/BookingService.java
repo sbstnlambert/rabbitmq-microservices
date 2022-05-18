@@ -1,5 +1,8 @@
-package be.technifutur.booking;
+package be.technifutur.booking.service;
 
+import be.technifutur.booking.communication.MessageSender;
+import be.technifutur.booking.model.Booking;
+import be.technifutur.booking.model.BookingDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
