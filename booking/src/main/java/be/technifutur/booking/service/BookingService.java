@@ -48,7 +48,7 @@ public class BookingService {
                 .findFirst()
                 .orElseThrow();
         ResponseEntity<Double> response = this.template.getForEntity(
-                "http://localhost:8282/invoices/price?ref=" + ref,
+                "http://invoice-service/invoices/price?ref=" + ref,
                 Double.class
         );
         Double price = response.getBody();

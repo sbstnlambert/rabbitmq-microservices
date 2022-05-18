@@ -1,4 +1,4 @@
-package be.technifutur.invoice;
+package be.technifutur.invoice.communication;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

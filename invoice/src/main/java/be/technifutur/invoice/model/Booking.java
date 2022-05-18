@@ -1,4 +1,4 @@
-package be.technifutur.invoice;
+package be.technifutur.invoice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -33,6 +33,7 @@ public class BookingController {
         return this.service.getInvoicedBookings();
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/booking")
     public BookingDTO getBookingByReference(@RequestParam(name = "ref") UUID ref) {
         return this.service.getBookingByReference(ref);

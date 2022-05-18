@@ -1,7 +1,8 @@
-package be.technifutur.invoice;
+package be.technifutur.invoice.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import be.technifutur.invoice.model.Invoice;
+import be.technifutur.invoice.service.InvoiceService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class InvoiceController {
         this.service = service;
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping
     public List<Invoice> getInvoices() {
         return this.service.getInvoices();

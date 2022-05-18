@@ -1,5 +1,7 @@
-package be.technifutur.invoice;
+package be.technifutur.invoice.service;
 
+import be.technifutur.invoice.communication.MessageSender;
+import be.technifutur.invoice.model.Invoice;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
