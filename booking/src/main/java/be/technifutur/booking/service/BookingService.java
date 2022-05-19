@@ -1,6 +1,7 @@
 package be.technifutur.booking.service;
 
 import be.technifutur.booking.communication.MessageSender;
+import be.technifutur.booking.feign.InvoiceClient;
 import be.technifutur.booking.model.Booking;
 import be.technifutur.booking.model.BookingDTO;
 import org.slf4j.Logger;
@@ -20,10 +21,12 @@ public class BookingService {
     private final MessageSender sender;
     private final Logger logger = LoggerFactory.getLogger(BookingService.class);
     private final RestTemplate template;
+    private final InvoiceClient invoiceClient;
 
-    public BookingService(MessageSender sender, RestTemplate template) {
+    public BookingService(MessageSender sender, RestTemplate template, InvoiceClient invoiceClient) {
         this.sender = sender;
         this.template = template;
+        this.invoiceClient = invoiceClient;
     }
 
     public void createBooking(Booking booking) {
@@ -47,11 +50,12 @@ public class BookingService {
                 .filter(b -> b.getRef().equals(ref))
                 .findFirst()
                 .orElseThrow();
-        ResponseEntity<Double> response = this.template.getForEntity(
-                "http://invoice-service/invoices/price?ref=" + ref,
-                Double.class
-        );
-        Double price = response.getBody();
+//        ResponseEntity<Double> response = this.template.getForEntity(
+//                "http://invoice-service/invoices/price?ref=" + ref,
+//                Double.class
+//        );
+//        Double price = response.getBody();
+        Double price = invoiceClient.getBookingPrice(ref);
         return BookingDTO.builder()
                 .ref(booking.getRef())
                 .arrival(booking.getArrival())
