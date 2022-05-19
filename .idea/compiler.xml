@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="config-server" />
         <module name="booking" />
         <module name="invoice" />
         <module name="api-gateway-v2" />
@@ -18,6 +19,7 @@
       <module name="api-gateway" target="17" />
       <module name="api-gateway-v2" target="17" />
       <module name="booking" target="17" />
+      <module name="config-server" target="17" />
       <module name="invoice" target="17" />
       <module name="rabbitmq-booking-invoice" target="17" />
       <module name="user" target="17" />
@@ -28,6 +30,7 @@
       <module name="api-gateway" options="-parameters" />
       <module name="api-gateway-v2" options="-parameters" />
       <module name="booking" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="invoice" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>

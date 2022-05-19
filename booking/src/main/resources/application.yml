@@ -1,37 +1,41 @@
-server:
-  port: 8181
+#server:
+#  port: 8181
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-  datasource:
-    url: jdbc:h2:mem:rabbitdb
-    username: user
-    password: pass
-  h2:
-    console:
-      enabled: true
-      path: /h2
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#  datasource:
+#    url: jdbc:h2:mem:rabbitdb
+#    username: user
+#    password: pass
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
 
   application:
     name: booking-service
+  profiles:
+    active: development
+  config:
+    import: configserver:http://root:s3cr3t@localhost:8888
 
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        service-name: ${spring.application.name}
-        instance-id: ${spring.application.name}:${random.uuid}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - health
-          - beans
-          - mappings
-          - metrics
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        service-name: ${spring.application.name}
+#        instance-id: ${spring.application.name}:${random.uuid}
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include:
+#          - health
+#          - beans
+#          - mappings
+#          - metrics
