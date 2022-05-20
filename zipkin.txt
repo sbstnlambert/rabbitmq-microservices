@@ -1,0 +1,14 @@
+• Techno : Zipkin, Sleuth 
+• Quoi : (Zipkin) Investiguer les (méta)données relatives aux requêtes effectuées / (Sleuth) Envoyer les données
+• Pourquoi : Fournir une interface graphique facilitant l'analyse de ces requêtes pour retravailler/débugger les services
+
+• Installation :
+- java -jar target/nom-server-zipkin.jar
+- dans navigateur : localhost:9411
+- on se retrouve sur la page du server
+
+On peut désormais enregistrer des call entre services.
+
+- Deux dépendances chez les services dont on veut voir les requêtes via Zipkin :
+1) spring-cloud-starter-zipkin
+2) spring-cloud-starter-sleuth

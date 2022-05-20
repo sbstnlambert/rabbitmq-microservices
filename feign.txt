@@ -1,0 +1,20 @@
+FEIGN (= Envoyer des requêtes + gérer le CircuitBreaker + Gérer exception)
+
+1) Ajouter dépendance spring-cloud-starter-openfeign
+2) Dans booking, créer une interface (ici InvoiceClient) avec l'annotation @FeignClient(name = "invoice-service")
+3) Y c/c la méthode qui m'intéresse (ici getBookingPrice par ex.) en lui ajoutant, en paramètre, le path ("/invoices") :
+	 -> @GetMapping(path="/invoices/price", params = "ref")
+4) Ajouter la dépendance à InvoiceClient dans BookingService
+5) On utilise cette dépendance avec un .peek dans ladite méthode du service
+6) Dans la classe principale (BookingApplication), fournir l'annotation @EnableFeignClient
+
+CIRCUITBREAKER
+1) Dans application.yml du service booking, configurer circuitbreaker à true
+2) Chercher à résoudre les n bugs qui s'ensuivent
+3) Abandonner
+4) Pleurer
+
+retryer : outil pour déterminer si oui ou non on doit réessayer
+
+Fallback: Créer une classe qui implémentera l'interface
+Se déclenche quand le CircuitBreaker est implémenté ET si j'ai une mauvaise réponse (pas une 200)

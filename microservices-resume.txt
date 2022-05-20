@@ -1,0 +1,80 @@
+RÉSUMÉ DES DÉPENDANCES RELATIVES AUX MICROSERVICES
+
+Un grand projet amène de grandes complexités.
+Pour aider à la gestion du pattern des microservices, on a plusieurs patterns qui peuvent aider.
+
+-- COMMUNICATION --
+
+• FEIGN / RABBITMQ / CIRCUITBREAKER
+	- Communication :
+
+		+ Messaging : 	On pourrait utiliser RabbitMQ (files d'attente), mais disons qu'on décide de passer à Kafka
+				Spring-stream vient aider en modifiant le binder qui fait le lien entre les deux services
+
+		+ Remote Procedure Invocation :	HTTP = RestTemplate / WebClient
+						Feign vient aider à faciliter la communication HTTP en codant moins
+						Feign permet de faciliter la casse du circuit si justifié (CircuitBreaker)
+						CircuitBreaker fait intervenir resilience4j pour gérer les taux d'échecs de requêtes (statistiques)
+							. Ex : resilience4j.circuitbreaker.configs.default.minimumNumberOfCalls: 5
+							. Ex : resilience4j.circuitbreaker.configs.default.failureRateThrehold: 60
+						Couplage entre Feign et CircuitBreaker
+
+-----------------
+
+
+-- OBSERVABILITY --
+
+• CONSUL / ACTUATOR
+	- Registre (application Consul lancée avec 'consul agent -dev')
+		+ Server-side discovery
+		+ Client-side discovery
+		+ Healthcheck (spring-actuator) : permet à consul de savoir si l'instance est toujours en vie et donner des infos de santé sur notre app
+
+• LOADBALANCER
+	- Fortement couplé au CONSUL : l'un va avec l'autre, sinon assez inutile
+	- On donne le nom du service au LB tel qu'il est connu par CONSUL
+
+• ZIPKIN/SLEUTH
+	- Distributed tracing :
+		+ Zipkin : interface graphique pour analyser les métadonnées relatives à la communication entre services
+		+ Sleuth : transfère ces données à Zipkin
+
+-----------------
+
+
+-- SECURITY --
+
+• JWT
+	- Access Token :
+		+ Pas besoin de se connecter toutes les 30 sec avec username/password
+		+ De fait, créer un token permet de stocker la connexion chez le client qui doit alors donner la preuve de son authentification via ce token
+
+-----------------
+
+
+-- CONFIGURATION --
+
+• CONFIG
+	- Recenser les configurations identiques aux différents services en un même endroit
+	- Rassembler les configurations sans devoir les chercher dans tous les services
+	- Idée de server + client :
+		+ Server : en charge de distribuer les configurations
+		+ Client : contacte le server pour chercher les configurations
+		+ 3 concepts :	nom de l'app (spring.application.name),
+				profil (spring.profile.active),
+				label,
+				configuration (spring.config.import)
+
+-------------------
+
+
+-- PROXY --
+
+• GATEWAY
+	- Point d'entrée unique vers notre app via son url
+	- Spécifier qui (une app mobile, Angular, etc.) peut accéder à quoi (telle ou telle fonctionnalité)
+	- On ne peut jamais communiquer de l'extérieur avec le service Booking (par ex.) sans passer par la GATEWAY : c'est une forme de sécurité en soi
+	- On ne doit pas tout coder nous-même, on configure l'accessibilité de manière dite 'déclarative'
+	- Couplage faible mais utile avec LB
+
+-----------

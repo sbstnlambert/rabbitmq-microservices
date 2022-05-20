@@ -1,0 +1,65 @@
+• Techno : Spring Cloud Stream
+
+• Rôle :
+	- Couche d'abstraction ; se déconnecter du service de messagerie utilisé en utilisant les concepts ci-dessous pour rendre commun le mode de transmission de messages
+
+• Dépendance :
+	- spring-cloud-starter-stream-(nom-type-communication)rabbit
+	- plus besoin de la dépendance amqp (car inclue dans la dépendance stream)
+
+• Deux avantages
+	- Méthode de fonctionnement différente et plus simple
+	- Possibilité de changer de type de messagerie rapidement (ex. de Kafka à RabbitMQ)
+
+• Concepts quel que ce soit le type de messagerie :
+	- Channel
+	- Binding
+	- Consumer
+	- Producer
+	- Processor
+
+• Attention :
+	- énormément d'éléments dépcréciés avec Stream (ex. : @Output)
+	- on va beaucoup utiliser des façons fonctionnelles de travailler (ex. : lambda)
+	- bonne documentation : officielle (spring.io)
+
+• Concepts-méthodes (dans les classes)
+
+/CONSUMER
+	- Un Bean d'un consumer qui prend un consumer et ne renvoie rien ; consumer = la lambda
+
+/PRODUCER
+	- Envoyer un objet à une destination avec StreamBridge
+	- Destination : un exhange particulier
+
+/PROCESSOR
+	- Un consumer et un producer à la fois
+	- Fonction qui prend un type de données et renvoie un type de données (identique ou différent)
+
+• Concepts-configuration (dans application.yml)
+
+/BINDING
+	- On se dirige dans l'appliction.yml
+	- On va pouvoir y définir certaines fonctions
+		. Ex: spring.cloud.stream.function.definition=input;processor;output
+
+/CHANNEL (lié au BINDING)
+	- C'est un flux de données particuliers liés à une fonction
+	- Pour chaque fonction (processor, input, output), on a un channel de processor, un channel d'input et un channel d'output
+
+/BINDERS (peut y en avoir plusieurs : certains messages envoyés via rabbit, d'autres via kafka, etc.)
+	- Permet de déclarer le service que je vais utiliser pour recevoir et envoyer ces messages
+		. Ex : spring.cloud.stream.binders:rabbit(nom-arbitraire):type=rabbit
+		. Ex : spring.cloud.stream.binders:rabbit(nom-arbitraire):environment:spring:rabbitmq:host...[config-rabbitmq-de-base]
+
+/BINDINGS
+	- Passer du binder commun aux binders ciblés
+		. Ex : spring.cloud.stream.bindings:input-in-0(nom-binding-arbitraire):destination=(destination)
+		. Ex : spring.cloud.stream.bindings:input-in-0(nom-binding-arbitraire):binder=rabbit(type-communication)
+		. Ex : spring.cloud.stream.bindings:input-in-0(nom-binding-arbitraire):group=processed(queue-définie)
+
+
+Questieux :
+
+1) Définir un @Bean pour send un Producer ?
+2) On envoie un Booking -> Invoice retourne un Double ?

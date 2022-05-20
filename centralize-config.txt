@@ -1,0 +1,21 @@
+• Quoi : Importer les données de configuration depuis un serveur externe
+• Pourquoi : Ne pas toujours devoir recompiler quand on change la config => Aller plus vite
+• Techno : Spring Cloud Config
+• Besoin :
+	1) Un serveur
+	2) Des clients
+
+• Comment :
+
+- Créer un service ClientConfig
+- Intégrer la dépendance spring-cloud-starter-config (ainsi que spring web + security si pas déjà présents)
+- Configurer application.yml en important les configurations avec spring.config.import
+- Créer un service ServerConfig
+- Conseille de configurer via Github
+- Configurer application.yml : server.port, spring.security.user[name,password], spring.cloud.config.server.git[uri,default-label,clone-on-start]
+- uri = lien repo github ; default-label = nom de la branche, clone-on-start: true
+
+Règle géénrale :
+1) faire un github avec configurations (principale: application.yml, particulière: application.yml:spring.profiles.active:prod)
+2) Lien server/client
+3) Client récupère selon uri et nom donnés
