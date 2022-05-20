@@ -1,6 +1,6 @@
 package be.technifutur.invoice.service;
 
-import be.technifutur.invoice.communication.MessageSender;
+//import be.technifutur.invoice.communication.MessageSender;
 import be.technifutur.invoice.model.Invoice;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
@@ -16,22 +16,22 @@ public class InvoiceService {
 
     private final List<Invoice> invoices = new ArrayList<>();
     private final Logger logger = LoggerFactory.getLogger(InvoiceService.class);
-    private final MessageSender sender;
+//    private final MessageSender sender;
 
-    public InvoiceService(MessageSender sender) {
-        this.sender = sender;
-    }
+//    public InvoiceService(MessageSender sender) {
+//        this.sender = sender;
+//    }
 
-    public void createInvoice(UUID bookingRef, int numberOfNightsBooked) {
-        Invoice i = new Invoice(bookingRef, numberOfNightsBooked*10);
-        try {
-            sender.sendInvoiceToBooking(i);
-            this.invoices.add(i);
-        } catch(JsonProcessingException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
-        }
-    }
+//    public void createInvoice(UUID bookingRef, int numberOfNightsBooked) {
+//        Invoice i = new Invoice(bookingRef, numberOfNightsBooked*10);
+//        try {
+//            sender.sendInvoiceToBooking(i);
+//            this.invoices.add(i);
+//        } catch(JsonProcessingException e) {
+//            logger.error(e.getMessage());
+//            e.printStackTrace();
+//        }
+//    }
 
     public List<Invoice> getInvoices() {
         return new ArrayList<>(this.invoices);

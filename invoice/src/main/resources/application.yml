@@ -26,6 +26,31 @@ spring:
         service-name: ${spring.application.name}
         instance-id: ${spring.application.name}:${random.uuid}
 
+    stream:
+      function:
+        definition: processor
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
+        bindings:
+          # get unprocessed and send processed
+          processor-in-0:
+            destination: queue.log.messages
+            binder: rabbit
+            group: unprocessed
+          processor-out-0:
+            destination: queue.processed.log.messages
+            binder: rabbit
+            group: processed
+
 management:
   endpoints:
     web:

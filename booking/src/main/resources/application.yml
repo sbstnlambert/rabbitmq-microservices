@@ -22,6 +22,35 @@ spring:
   config:
     import: configserver:http://root:s3cr3t@localhost:8888
 
+  cloud:
+    stream:
+      function:
+        definition: input;output
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
+      bindings:
+        # listening processed messages
+        input-in-0:
+          # TopicExchange nom
+          destination: queue.processed.log.messages
+          binder: rabbit
+          # Queue
+          group: processed
+        # producing unprocessed messages
+        output-out-0:
+          destination: queue.log.messages
+          binder: rabbit
+          group: unprocessed
+
 #  cloud:
 #    consul:
 #      host: localhost

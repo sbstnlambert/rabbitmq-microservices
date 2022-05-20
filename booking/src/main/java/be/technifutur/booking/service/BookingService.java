@@ -1,6 +1,6 @@
 package be.technifutur.booking.service;
 
-import be.technifutur.booking.communication.MessageSender;
+//import be.technifutur.booking.communication.MessageSender;
 import be.technifutur.booking.feign.InvoiceClient;
 import be.technifutur.booking.model.Booking;
 import be.technifutur.booking.model.BookingDTO;
@@ -18,20 +18,20 @@ import java.util.UUID;
 public class BookingService {
 
     private final List<Booking> bookings = new ArrayList<>();
-    private final MessageSender sender;
+//    private final MessageSender sender;
     private final Logger logger = LoggerFactory.getLogger(BookingService.class);
     private final RestTemplate template;
     private final InvoiceClient invoiceClient;
 
-    public BookingService(MessageSender sender, RestTemplate template, InvoiceClient invoiceClient) {
-        this.sender = sender;
+    public BookingService(/*MessageSender sender,*/ RestTemplate template, InvoiceClient invoiceClient) {
+//        this.sender = sender;
         this.template = template;
         this.invoiceClient = invoiceClient;
     }
 
     public void createBooking(Booking booking) {
         try {
-            sender.sendBookingToInvoice(booking);
+//            sender.sendBookingToInvoice(booking);
             bookings.add(booking);
         } catch(Exception e) {
             logger.error(e.getMessage());
